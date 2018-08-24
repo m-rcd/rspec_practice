@@ -7,7 +7,6 @@ def solve(s,k)
         new_string += char
       elsif count >= k
         new_string += char
-        # count += 1
       else
         count += 1
       end

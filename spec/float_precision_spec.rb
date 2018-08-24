@@ -3,6 +3,7 @@ require 'float_precision'
 describe 'solution' do
   it 'rounds up the number to two decimal places' do
     expect(solution(12.3456)).to eq 12.35
+    expect(solution(34.567)).to eq 34.57
   end
   it 'rounds down the number to two decimal places' do
     expect(solution(65.4321)).to eq 65.43

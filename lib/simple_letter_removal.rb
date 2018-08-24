@@ -1,12 +1,18 @@
 def solve(s,k)
-  new_string = ""
   count = 0
-  s.each_char do |char|
-    if char != "a" || count == k
-      new_string += char
-    else
-      count += 1
+  ("a".."z").to_a.each do |letter|
+    new_string = ""
+    s.each_char do |char|
+      if char != letter
+        new_string += char
+      elsif count >= k
+        new_string += char
+        # count += 1
+      else
+        count += 1
+      end
     end
+    s = new_string
   end
-  new_string
+  s
 end
